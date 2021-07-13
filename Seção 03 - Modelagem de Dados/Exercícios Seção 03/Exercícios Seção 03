@@ -96,3 +96,4 @@ categoria do funcionário e é definido por meio de uma tabela que é atualizada
 veículo, qual cliente, a data em que o reparo foi efetuado e o custo total do reparo. A empresa pretende saber para cada reparo quais peças foram
 utilizadas e o seu preço, bem como o tempo de mão de obra gasto por cada funcionário e o respectivo custo. A informação relativa às peças em
 estoque deverá ser: código de identificação, designação, custo unitário e quantidade armazenada.
+
