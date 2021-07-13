@@ -40,3 +40,4 @@ R: GRANT - Usado para autorizar um usuário a executar ou setar operações no b
 R: BEGIN (ou START TRANSACTION*) - Usado para marcar o começo de uma transação que pode ser completada ou não.
    COMMIT - Finaliza uma transação.
    ROLLBACK - Faz com que as mudanças nos dados existentes deste o último COMMIT sejam descartadas.
+   
