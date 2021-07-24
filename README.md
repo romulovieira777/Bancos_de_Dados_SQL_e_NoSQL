@@ -8,6 +8,7 @@
 - [Seção 05 - Linguagem SQL - Parte 2](https://github.com/romulovieira777/Bancos_de_Dados_SQL_e_NoSQL/tree/main/Se%C3%A7%C3%A3o%2005%20-%20Linguagem%20SQL%20-%20Parte%202)
 - [Seção 06 - MySQL - Parte 1](https://github.com/romulovieira777/Bancos_de_Dados_SQL_e_NoSQL/tree/main/Se%C3%A7%C3%A3o%2006%20-%20MySQL%20-%20Parte%201)
 - [Seção 07 - MySQL - Parte 2](https://github.com/romulovieira777/Bancos_de_Dados_SQL_e_NoSQL/tree/main/Se%C3%A7%C3%A3o%2007%20-%20MySQL%20-%20Parte%202)
+- [Seção 08 - PostgreSQL - Parte 1](https://github.com/romulovieira777/Bancos_de_Dados_SQL_e_NoSQL/tree/main/Se%C3%A7%C3%A3o%2008%20-%20PostgreSQL%20-%20Parte%201)
 
 Link para o curso: [Udemy](https://www.udemy.com/course/curso-de-banco-de-dados-do-basico-ao-avancado/)
 
