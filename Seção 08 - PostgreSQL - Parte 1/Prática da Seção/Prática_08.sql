@@ -77,3 +77,40 @@ INSERT INTO produtos
    , 500
    , 2
 );
+
+-- Selecionando Dados da Tabela Tipos Produto
+SELECT
+  *
+FROM
+  tipos_produto
+WHERE
+  codigo = 1;
+
+SELECT
+  *
+FROM
+  tipos_produto
+WHERE
+  codigo = 2;
+
+-- Selecionando Dados da Tabela Produto
+SELECT
+  *
+FROM
+  produtos
+WHERE
+  descricao = 'Laptop';
+
+SELECT
+  *
+FROM
+  produtos
+WHERE
+  descricao = 'Laptop';
+
+SELECT
+  *
+FROM
+  produtos
+WHERE
+  preco <= '$500';
