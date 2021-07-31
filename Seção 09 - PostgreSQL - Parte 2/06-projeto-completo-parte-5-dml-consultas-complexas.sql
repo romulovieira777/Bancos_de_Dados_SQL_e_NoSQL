@@ -5,9 +5,9 @@ SELECT
   , af.personagem
 FROM
     atores_filme 	AS af
-  , filmes 			AS f
-  , generos 		AS g
-  , atores 			AS a
+  , filmes 			  AS f
+  , generos 		  AS g
+  , atores 			  AS a
 WHERE
     f.id = af.id_filme
 AND 
@@ -19,13 +19,13 @@ AND
 	
 -- Encontrar todos os filmes que determinado ator atuou por genero
 SELECT
-	f.titulo
+	  f.titulo
   , af.personagem
 FROM
-	atores_filme 	AS af
-  , filmes 			AS f
-  , generos 		AS g
-  , atores 			AS a
+	  atores_filme 	AS af
+  , filmes 			  AS f
+  , generos 	  	AS g
+  , atores 		  	AS a
 WHERE
 	f.id = af.id_filme 
 AND 
@@ -39,19 +39,19 @@ AND
 	
 -- Verificar qual cliente alugou o que
 SELECT 
-	e.id
+	  e.id
   , c.nome
   , c.sobrenome
   , e.data
   , f.titulo
   , g.genero
 FROM
-	emprestimos 		AS e
-  , clientes 			AS c
-  , filmes 				AS f
-  , generos 			AS g
-  , dvds 				AS d
-  , filmes_emprestimo 	AS fe
+	  emprestimos 	      	AS e
+  , clientes 		        	AS c
+  , filmes 			         	AS f
+  , generos 		        	AS g
+  , dvds 			          	AS d
+  , filmes_emprestimo   	AS fe
 WHERE
 	fe.id_emprestimo = e.id
 AND
@@ -64,22 +64,22 @@ AND
 	f.id_genero = g.id;
 	
 -- Verificar o que os clientes devolveram
-SELECT 
-	de.id
+SELECT
+    de.id
   , c.nome
   , c.sobrenome
   , de.data
   , f.titulo
 FROM
-	devolucoes 			AS de
-  , clientes 			AS c
-  , filmes 				AS f
-  , filmes_devolucao 	AS fd
-  , dvds 				AS d
-  , emprestimos 		AS e
-  , filmes_emprestimo 	AS fe
+	  devolucoes 			      AS de
+  , clientes 			        AS c
+  , filmes 				        AS f
+  , filmes_devolucao 	    AS fd
+  , dvds 			          	AS d
+  , emprestimos 		      AS e
+  , filmes_emprestimo   	AS fe
 WHERE 
-	fd.id_filme_imprestimo = fe.id
+	fd.id_filme_emprestimo = fe.id
 AND 
 	fd.id_devolucao = de.id
 AND 
@@ -94,20 +94,20 @@ AND
 
 -- Verificar quanto cada cliente pagou
 SELECT
-	e.id
+	  e.id
   , c.nome
   , c.sobrenome
   , SUM(f.valor)
 FROM
-	filmes_devolucao 	AS fd
-  , clientes 			AS c
-  , dvds 				AS d
-  , filmes 				AS f
-  , devolucoes 			AS de
-  , emprestimos 		AS e
+	  filmes_devolucao 	  AS fd
+  , clientes 		    	  AS c
+  , dvds 			        	AS d
+  , filmes 			      	AS f
+  , devolucoes 		    	AS de
+  , emprestimos 		    AS e
   , filmes_emprestimo 	AS fe
 WHERE 
-	fd.id_filme_imprestimo = fe.id
+	fd.id_filme_emprestimo = fe.id
 AND 
 	fd.id_devolucao = de.id
 AND 
