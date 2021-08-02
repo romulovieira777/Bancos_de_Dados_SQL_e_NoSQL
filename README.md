@@ -14,4 +14,3 @@
 - [Seção 11 - MongoDB - Parte - 1](https://github.com/romulovieira777/Bancos_de_Dados_SQL_e_NoSQL/tree/main/Se%C3%A7%C3%A3o%2011%20-%20MongoDB%20-%20Parte%201)
 
 Link para o curso: [Udemy](https://www.udemy.com/course/curso-de-banco-de-dados-do-basico-ao-avancado/)
-
