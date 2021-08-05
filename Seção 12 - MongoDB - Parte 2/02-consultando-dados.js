@@ -108,7 +108,7 @@ db.inscricoes.find(
 // Selecionando coleções
 db.inscricoes.find(
 	{
-		"nome": "Fabiano Perez"
+		"aluno": "Fabiano Perez"
 	}
 )
 
