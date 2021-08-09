@@ -13,5 +13,6 @@
 - [Seção 10 - SQLite](https://github.com/romulovieira777/Bancos_de_Dados_SQL_e_NoSQL/tree/main/Se%C3%A7%C3%A3o%2010%20-%20SQLite)
 - [Seção 11 - MongoDB - Parte 1](https://github.com/romulovieira777/Bancos_de_Dados_SQL_e_NoSQL/tree/main/Se%C3%A7%C3%A3o%2011%20-%20MongoDB%20-%20Parte%201)
 - [Seção 12 - MongoDB - Parte 2](https://github.com/romulovieira777/Bancos_de_Dados_SQL_e_NoSQL/tree/main/Se%C3%A7%C3%A3o%2012%20-%20MongoDB%20-%20Parte%202)
+- [Seção 13 - Redis - Parte 1](https://github.com/romulovieira777/Bancos_de_Dados_SQL_e_NoSQL/tree/main/Se%C3%A7%C3%A3o%2013%20-%20Redis%20-%20Parte%201)
 
 Link para o curso: [Udemy](https://www.udemy.com/course/curso-de-banco-de-dados-do-basico-ao-avancado/)
