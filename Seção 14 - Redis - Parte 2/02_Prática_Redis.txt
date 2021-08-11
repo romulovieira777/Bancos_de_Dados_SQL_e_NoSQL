@@ -38,3 +38,7 @@ LTRIM
 -- Adicionando elemento na lista
 RPUSH
     "fila:confirma-celular" "23123788221"
+
+-- Removendo o primeiro elemento da lista
+LPOP
+    "fila:confirma-celular"
