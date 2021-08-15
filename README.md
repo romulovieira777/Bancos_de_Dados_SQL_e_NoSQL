@@ -17,5 +17,7 @@
 - [Seção 14 - Redis - Parte 2](https://github.com/romulovieira777/Bancos_de_Dados_SQL_e_NoSQL/tree/main/Se%C3%A7%C3%A3o%2014%20-%20Redis%20-%20Parte%202)
 - [Seção 15 - CouchDB](https://github.com/romulovieira777/Bancos_de_Dados_SQL_e_NoSQL/tree/main/Se%C3%A7%C3%A3o%2015%20-%20CouchDB)
 - [Seção 16 - Firebase](https://github.com/romulovieira777/Bancos_de_Dados_SQL_e_NoSQL/tree/main/Se%C3%A7%C3%A3o%2016%20-%20Firebase)
+- Seção 17 - Encerramento
+- [Seção 18 - Criando Aplicações CRUD com Java, Python e Banco de Dados]()
 
 Link para o curso: [Udemy](https://www.udemy.com/course/curso-de-banco-de-dados-do-basico-ao-avancado/)
