@@ -1,3 +1,6 @@
+-- Criar banco de dados jpostgresql
+jpostgresql
+
 -- Criando tabela produtos
 CREATE TABLE produtos
 (

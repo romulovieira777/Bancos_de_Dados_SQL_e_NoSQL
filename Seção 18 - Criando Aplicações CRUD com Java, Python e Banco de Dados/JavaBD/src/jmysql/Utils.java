@@ -1,14 +1,11 @@
 package jmysql;
 
 import java.sql.Connection;
-import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
-
-//import jdk.javadoc.internal.doclets.formats.html.resources.standard;
 
 public class Utils {
 	
@@ -70,7 +67,7 @@ public class Utils {
 					System.out.println("--------------------");
 				}
 			} else {
-				System.out.println("Não existem produtos cadastrados.")
+				System.out.println("Não existem produtos cadastrados.");
 			}
 			produtos.close();
 			desconectar(conn);
@@ -154,7 +151,7 @@ public class Utils {
 				System.out.println("O produto " + nome + " foi atualizado com sucesso.");
 
 			} else {
-				System.out.println("Não existe produto com o id informado.")
+				System.out.println("Não existe produto com o id informado.");
 			}
 
 		} catch(Exception e) {
@@ -188,7 +185,7 @@ public class Utils {
 				desconectar(conn);
 				System.out.print("O produto foi deletado com sucesso.");
 			}else {
-				System.out.println("Não existe o produto com o id informado.s")
+				System.out.println("Não existe o produto com o id informado.s");
 			}
 
 		} catch(Exception e) {
