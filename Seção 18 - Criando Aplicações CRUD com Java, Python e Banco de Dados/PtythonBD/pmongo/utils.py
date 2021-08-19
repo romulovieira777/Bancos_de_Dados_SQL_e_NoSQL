@@ -8,7 +8,7 @@ def conectar():
     """
     Função para conectar ao servidor
     """
-    conn = MongoClient('localhost', 27017)  # localhost do seu banco de dados
+    conn = MongoClient('', 'número da porta')  # localhost do seu banco de dados
 
     return conn
 
@@ -26,7 +26,7 @@ def listar():
     Função para listar os produtos
     """
     conn = conectar()
-    db = conn.pmongo  # conexão com o banco de dados criado
+    db = conn.  # conexão com o banco de dados criado
 
     try:
         if db.produtos.count_documents({}) > 0:
@@ -51,7 +51,7 @@ def inserir():
     Função para inserir um produto
     """  
     conn = conectar()
-    db = conn.pmongo
+    db = conn.
 
     nome = input('Informe o nome do produto: ')
     preco = float(input('Informe o preço do produto: '))
@@ -76,7 +76,7 @@ def atualizar():
     Função para atualizar um produto
     """
     conn = conectar()
-    db = conn.pmongo
+    db = conn.
 
     _id = input('Informe o ID do produto: ')
     nome = input('Informe o nome do produto: ')
@@ -113,7 +113,7 @@ def deletar():
     Função para deletar um produto
     """  
     conn = conectar()
-    db = conn.pmongo
+    db = conn.
 
     _id = input('Informe o id do produto: ')
 
