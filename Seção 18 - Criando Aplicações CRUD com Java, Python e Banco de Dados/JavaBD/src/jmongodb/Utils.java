@@ -1,9 +1,22 @@
 package jmongodb;
 
+import java.util.Arrays;
 import java.util.Scanner;
+
+import org.bson.Document;
+import org.bson.conversions.Bson;
+import org.json.JSONObject;
+
+import com.mongodb.MongoClientSettings;
+import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
+import com.mongodb.client.MongoDatabase;
+
+import static com.mongodb.client.model.Updates.combine;
+import static com.mongodb.client.model.Updates.set;
 
 
 public class Utils {
@@ -39,7 +52,20 @@ public class Utils {
 			MongoCursor<Document> cursor = collection.find().iterator();
 
 			try {
-				System.out.println("Listando produtos...")
+				System.out.println("Listando produtos...");
+				System.out.println("--------------------");
+				while(cursor.hasNext()) {
+					String json = cursor.next().toJson();					
+
+					JSONObject obj = new = JSONObject(json);
+					JSONObject id = obj.getJSONObject("_id");
+
+					System.out.println("ID: " + id.get("$oid"));
+					System.out.println("Produto: " + obj.get("nome"));
+					System.out.println("Preço: " + obj.get("preco"));
+					System.out.println("Estoque: " + obj.get("estoque"));
+					System.out.println("----------------------");
+				}
 			} catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -50,15 +76,67 @@ public class Utils {
 	}
 	
 	public static void inserir() {
-		System.out.println("Inserindo produtos...");
+		MongoCollection<Document> collection = conectar();
+
+		System.out.println("Informe o nome do produto: ");
+		String nome = teclado.nextLine();
+
+		System.out.println("Informe o preço do produto: ");
+		String preco = teclado.nextFloat();
+
+		System.out.println("Informe o estoque: ");
+		int estoque = teclado.nextInt();
+
+		JSONObject nproduto = new JSONObject();
+		nproduto.put("nome", nome);
+		nproduto.put("preco", preco);
+		nproduto.put("estoque", estoque);
+
+		collection.insertOne(Document.parse(nproduto.toString()));
+
+		System.out.println("O produto " + nome + " foi inserido com sucesso.");
+		
 	}
 	
 	public static void atualizar() {
-		System.out.println("Atualizando produtos...");
+		MongoCollection<Document> collection = conectar();
+
+		System.out.println("Informe o ID do produto: ");
+		String _id = teclado.nextLine();
+
+		System.out.println("Informe o nome do produto: ");
+		String nome = teclado.nextLine();
+
+		System.out.println("Informe o preço: ");
+		float preco = teclado.nextFloat();
+
+		System.out.println("Informe o estoque: ");
+		int estoque = teclado.nextInt();
+
+		Bson query = combine(set("nome", nome), set("preco", preco), set("estoque", estoque));
+
+		UpdateResult res = collection.updateOne(new Document("_id", new ObjectId(_id)), query);
+
+		if(res.getModifiedCount() == 1) {
+			System.out.println("O produto " + nome + " foi atualizado com sucesso.");
+		} else {
+			System.out.println("O produto não foi atualizado.");
+		}
 	}
 	
 	public static void deletar() {
-		System.out.println("Deletando produtos...");
+		MongoClient>Document> collection = conectar();
+
+		System.out.println("informe o ID do produto: ");
+		String _id = teclado.nextLine();
+
+		DeleteResult res = collection.deleteOne(new Document("_id", new ObjectId(_id)));
+
+		if(res.getDeleteCount() == 1) {
+			System.out.println("O produto foi excluído com sucesso.");
+		} else {
+			System.out.println("Não foi possível excluir o produto.");
+		}
 	}
 	
 	public static void menu() {
