@@ -113,14 +113,18 @@ public class Utils {
 		System.out.println("Informe o estoque: ");
 		int estoque = teclado.nextInt();
 
-		Bson query = combine(set("nome", nome), set("preco", preco), set("estoque", estoque));
+		try {
+			Bson query = combine(set("nome", nome), set("preco", preco), set("estoque", estoque));
 
-		UpdateResult res = collection.updateOne(new Document("_id", new ObjectId(_id)), query);
+			UpdateResult res = collection.updateOne(new Document("_id", new ObjectId(_id)), query);
 
-		if(res.getModifiedCount() == 1) {
-			System.out.println("O produto " + nome + " foi atualizado com sucesso.");
-		} else {
-			System.out.println("O produto não foi atualizado.");
+			if(res.getModifiedCount() == 1) {
+				System.out.println("O produto " + nome + " foi atualizado com sucesso.");
+			} else {
+				System.out.println("O produto não foi atualizado.");
+			}
+		} catch(java.lang.IllegalArgumentException e) {
+			System.out.println("ID inválido...");
 		}
 	}
 	
@@ -130,12 +134,16 @@ public class Utils {
 		System.out.println("informe o ID do produto: ");
 		String _id = teclado.nextLine();
 
-		DeleteResult res = collection.deleteOne(new Document("_id", new ObjectId(_id)));
+		try {
+			DeleteResult res = collection.deleteOne(new Document("_id", new ObjectId(_id)));
 
-		if(res.getDeleteCount() == 1) {
-			System.out.println("O produto foi excluído com sucesso.");
-		} else {
-			System.out.println("Não foi possível excluir o produto.");
+			if(res.getDeleteCount() == 1) {
+				System.out.println("O produto foi excluído com sucesso.");
+			} else {
+				System.out.println("Não foi possível excluir o produto.");
+			}
+		} catch(java.lang.IllegalArgumentException e) {
+			System.out.println("ID inválido..."); 
 		}
 	}
 	
