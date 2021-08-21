@@ -1,8 +1,7 @@
-package jbase;
+package jredis;
 
 import java.util.Scanner;
 
-//import jdk.javadoc.internal.doclets.formats.html.resources.standard;
 
 public class Utils {
 	

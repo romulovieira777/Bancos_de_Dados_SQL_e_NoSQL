@@ -1,4 +1,4 @@
-package jbase;
+package jredis;
 
 
 public class Programa {
