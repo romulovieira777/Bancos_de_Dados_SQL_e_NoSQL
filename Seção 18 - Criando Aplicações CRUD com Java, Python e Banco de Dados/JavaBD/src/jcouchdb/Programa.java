@@ -1,4 +1,4 @@
-package jbase;
+package jcouchdb;
 
 
 public class Programa {

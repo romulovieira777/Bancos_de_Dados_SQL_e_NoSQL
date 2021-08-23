@@ -1,17 +1,28 @@
-package jbase;
+package jcouchdb;
 
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpRequest.BodyPublishers;
+import java.net.http.HttpResponse;
+import java.net.http.HttpResponse.BodyHandlers;
 import java.util.Scanner;
 
-//import jdk.javadoc.internal.doclets.formats.html.resources.standard;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 
 public class Utils {
 	
 	static Scanner teclado = new Scanner(System.in);
 
-	public static void conectar() {
-		System.out.println("Conectando...");
+	public static HttpClient conectar() {
+		HttpClient conn = HttpClient.newBuilder().build();
+		
+		return conn;
 	}
-
+	
 	public static void desconectar() {
 		System.out.println("Desconectando...");
 	}
